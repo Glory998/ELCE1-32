@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body{
+  margin:0;                 /* ← Heading ko center me lane ka fix */
+  background:#223140;
+  font-family:Arial;
+  color:white;
+  text-align:center;
+}
+
+/* Heading */
+h1{
+  margin-top:40px;
+  margin-bottom:40px;
+  font-size:40px;
+}
+
+/* OUTER LAYER – MARGIN */
+.margin{
+  background:#ff6f52;
+  padding:30px;
+  position:relative;
+  display:inline-block;
+}
+.margin::after{
+  content:"Margin";
+  position:absolute;
+  top:5px;
+  left:50%;
+  transform:translateX(-50%);
+}
+
+/* BORDER */
+.border{
+  background:#00a3b8;
+  padding:30px;
+  position:relative;
+}
+.border::after{
+  content:"Border";
+  position:absolute;
+  top:5px;
+  left:50%;
+  transform:translateX(-50%);
+}
+
+/* PADDING */
+.padding{
+  background:#ffd36b;
+  padding:30px;
+  position:relative;
+}
+.padding::after{
+  content:"Padding";
+  position:absolute;
+  top:5px;
+  left:50%;
+  transform:translateX(-50%);
+}
+
+/* CONTENT */
+.content{
+  background:#06c6a8;
+  width:300px;
+  height:200px;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  font-size:22px;
+}
+</style>
+</head>
+<body>
+
+<h1>CSS Box Model</h1>
+
+<div class="margin">
+  <div class="border">
+    <div class="padding">
+      <div class="content">Content</div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

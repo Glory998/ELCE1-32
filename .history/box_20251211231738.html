@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body{
+  background:#223140;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  height:100vh;
+  font-family:Arial;
+  color:white;
+}
+
+/* OUTER LAYER – MARGIN */
+.margin{
+  background:#ff6f52;
+  padding:30px;
+  position:relative;
+}
+.margin::after{
+  content:"Margin";
+  position:absolute;
+  top:5px;
+  left:50%;
+  transform:translateX(-50%);
+}
+
+/* BORDER LAYER */
+.border{
+  background:#00a3b8;
+  padding:30px;
+  position:relative;
+}
+.border::after{
+  content:"Border";
+  position:absolute;
+  top:5px;
+  left:50%;
+  transform:translateX(-50%);
+}
+
+/* PADDING LAYER */
+.padding{
+  background:#ffd36b;
+  padding:30px;
+  position:relative;
+}
+.padding::after{
+  content:"Padding";
+  position:absolute;
+  top:5px;
+  left:50%;
+  transform:translateX(-50%);
+}
+
+/* CONTENT BOX */
+.content{
+  background:#06c6a8;
+  width:300px;
+  height:200px;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  font-size:22px;
+  position:relative;
+}
+</style>
+</head>
+<body>
+
+<div class="margin">
+  <div class="border">
+    <div class="padding">
+      <div class="content">Content</div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
+
