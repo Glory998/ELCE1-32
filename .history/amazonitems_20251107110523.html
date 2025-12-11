@@ -1,0 +1,146 @@
+/* styles.css */
+
+/* Reset-ish */
+* { box-sizing: border-box; margin: 0; padding: 0; font-family: "Segoe UI", Tahoma, Arial, sans-serif; }
+
+.site-header {
+  background: #1b4f6b; /* deep blue bar like image */
+  color: #fff;
+  padding: 12px 18px;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+/* small logo in center-ish like image */
+.site-header .logo{
+  width: 48px;
+  height: 48px;
+  background: #fff;
+  color: #1b4f6b;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  margin-right: 10px;
+}
+
+/* nav */
+.main-nav{
+  display:flex;
+  gap: 22px;
+  align-items:center;
+  flex: 1;
+  justify-content: center; /* center nav text */
+}
+.main-nav a{
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  padding: 6px 10px;
+  cursor: pointer;
+}
+
+/* page container */
+.container{
+  max-width: 1200px;
+  margin: 22px auto;
+  padding: 0 18px 60px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+}
+
+/* category box */
+.category{
+  border: 5px solid #d7d7d7;
+  padding: 12px;
+  background: #f7f5f3;
+  box-shadow: 0 2px 0 rgba(0,0,0,0.04);
+}
+
+/* header inside category */
+.category-header{
+  background: #1b4f6b;
+  color: #fff;
+  font-size: 20px;
+  font-weight: 700;
+  text-align: center;
+  padding: 10px;
+  margin-bottom: 12px;
+  border-radius: 2px;
+  box-shadow: inset 0 -4px 0 rgba(0,0,0,0.06);
+}
+
+/* product grid inside a category */
+.products{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 items in a row as in image */
+  gap: 14px;
+  padding: 8px;
+  border: 4px solid #e3e0dd; /* inner border like image */
+  background: #fff;
+}
+
+/* single product card */
+.product{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  padding: 8px;
+  border: 2px solid #ddd;
+  background: #fafafa;
+  min-height: 120px;
+}
+
+/* image box */
+.product img{
+  width: 100%;
+  height: 80px;
+  object-fit: cover;
+  border: 1px solid #ccc;
+  margin-bottom: 8px;
+  background: #fff;
+}
+
+/* caption (name + price) */
+.product .caption{
+  text-align: center;
+  font-size: 13px;
+  font-weight: 600;
+  color: #222;
+  padding: 4px 2px;
+}
+
+/* Make Watch category product images taller if needed */
+/* .category.watch .product img { height: 100px; } */
+
+/* Footer-like spacing for larger screens: make layout similar to image with watch & bike below */
+@media (max-width: 1000px){
+  .container{
+    grid-template-columns: 1fr;
+  }
+  .products{
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 600px){
+  .products{
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+  .product img{ height: 70px; }
+  .category-header{ font-size: 16px; padding: 8px; }
+}
+
+/* small niceties */
+.product:hover{
+  transform: translateY(-4px);
+  transition: transform .18s ease;
+  box-shadow: 0 8px 18px rgba(0,0,0,0.08);
+}
