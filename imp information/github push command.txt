@@ -1,0 +1,10 @@
+git init
+git config --global user.name "Glory998"
+git config --global user.email "itsglorysingh@gmail.com"
+git status
+git add.
+git commit -m "my Ist file"
+git remote add origin https://github.com/Glory998/ELCE1-32
+git remote -v
+git push --set-upstream origin main
+git push
