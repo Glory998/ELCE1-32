@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Responsive Product Grid</title>
+
+<style>
+    body{
+        margin:0;
+        font-family: Arial, sans-serif;
+        background:#f2f2f2;
+    }
+
+    h1{
+        text-align:center;
+        padding:20px 0;
+    }
+
+    /* Main container */
+    .container{
+        width:1000px;          /* IMPORTANT for laptop same output */
+        margin: auto;
+    }
+
+    /* Grid */
+    .grid{
+        display:grid;
+        grid-template-columns: repeat(2, 1fr);  /* Laptop: 2 cards per row */
+        gap:25px;
+    }
+
+    /* Card */
+    .card{
+        background:#fff;
+        padding:25px;
+        border-radius:12px;
+        text-align:center;
+        box-shadow:0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    .card img{
+        width:70px;
+        height:70px;
+        margin-bottom:10px;
+    }
+
+    .card h2{
+        margin:10px 0;
+    }
+
+    .card p{
+        color:#555;
+        font-size:14px;
+    }
+
+    .price{
+        margin-top:10px;
+        font-weight:bold;
+        font-size:18px;
+    }
+
+    /* Mobile responsive */
+    @media(max-width:768px){
+        .container{
+            width:90%;
+        }
+        .grid{
+            grid-template-columns: 1fr; /* mobile: single column */
+        }
+    }
+</style>
+</head>
+
+<body>
+
+<h1>Responsive Product Grid</h1>
+
+<div class="container">
+    <div class="grid">
+
+        <div class="card">
+            <img src="https://via.placeholder.com/70">
+            <h2>Product 1</h2>
+            <p>High-quality item with great features.</p>
+            <div class="price">₹499</div>
+        </div>
+
+        <div class="card">
+            <img src="https://via.placeholder.com/70">
+            <h2>Product 2</h2>
+            <p>Durable and stylish for daily use.</p>
+            <div class="price">₹799</div>
+        </div>
+
+        <div class="card">
+            <img src="https://via.placeholder.com/70">
+            <h2>Product 3</h2>
+            <p>Lightweight and comfortable.</p>
+            <div class="price">₹1,299</div>
+        </div>
+
+        <div class="card">
+            <img src="https://via.placeholder.com/70">
+            <h2>Product 4</h2>
+            <p>Trendy design with premium quality.</p>
+            <div class="price">₹899</div>
+        </div>
+
+    </div>
+</div>
+
+</body>
+</html>
